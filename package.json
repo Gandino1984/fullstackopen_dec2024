@@ -1,0 +1,23 @@
+{
+  "name": "fullstackopen_dec2024",
+  "version": "1.0.0",
+  "description": "Ejercicios del curso: ¡Aprende React, Redux, Node.js, MongoDB, GraphQL y TypeScript de una sola vez! Este curso te presentará el desarrollo web moderno basado en JavaScript. El enfoque principal es crear aplicaciones de una sola página con ReactJS que usan REST API creadas con Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gandino1984/fullstackopen_dec2024.git"
+  },
+  "keywords": [
+    "fullstack",
+    "certificate"
+  ],
+  "author": "German Andino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gandino1984/fullstackopen_dec2024/issues"
+  },
+  "homepage": "https://github.com/Gandino1984/fullstackopen_dec2024#readme"
+}
