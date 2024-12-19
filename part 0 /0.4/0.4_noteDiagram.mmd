@@ -1,0 +1,42 @@
+sequenceDiagram
+    participant Browser
+    participant Server as studies.cs.helsinki.fi
+
+    Note over Browser,Server: Initial page load
+    Browser->>+Server: GET /exampleapp/
+    Server-->>-Browser: 200 OK (321 B)
+    Note right of Browser: Browser receives HTML document
+
+    Note over Browser,Server: Loading page assets
+    Browser->>+Server: GET /exampleapp/kuva.png
+    Server-->>-Browser: 200 OK (89.35 KB)
+    Note right of Browser: Image loaded with low priority
+
+    Note over Browser,Server: Browser attempts to fetch favicon
+    Browser->>+Server: GET /favicon.ico
+    Server-->>-Browser: 404 Not Found
+    Note right of Browser: Favicon not found on server
+
+    Note over Browser,Server: Loading application data
+    Browser->>+Server: GET /exampleapp/notes
+    Server-->>-Browser: 200 OK (439 B)
+    Note right of Browser: Receives notes data with highest priority
+
+    Note over Browser,Server: Loading style and behavior
+    Browser->>+Server: GET /exampleapp/main.css
+    Server-->>-Browser: 200 OK (78 B)
+    Note right of Browser: CSS styles for the application
+
+    Browser->>+Server: GET /exampleapp/main.js
+    Server-->>-Browser: 200 OK (579 B)
+    Note right of Browser: JavaScript code for functionality
+
+    Note over Browser,Server: Loading dynamic content
+    Browser->>+Server: GET /exampleapp/data.json
+    Server-->>-Browser: 200 OK (5.72 KB)
+    Note right of Browser: JSON data loaded by JavaScript
+
+    Note over Browser,Server: Second favicon attempt
+    Browser->>+Server: GET /favicon.ico
+    Server-->>-Browser: 404 Not Found
+    Note right of Browser: Favicon still not found
