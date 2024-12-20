@@ -6,6 +6,7 @@ const Header = ({ course }) => {
   )
 }
 
+//might be going a little fast by mapping the content, sorry...
 const Content = ({ parts }) => {
   return (
     <div>
